@@ -10,5 +10,3 @@ Some links:
 1. [about](/about/)
 2. [links](/links/)
 3. [posts](/posts/)
-
----

@@ -3,5 +3,16 @@ languageCode = "en-us"
 title = "MoveGB test site"
 
 # Syntax highlighting. Themes include solarized-dark, autumn, github, friendly, monokai, monokailight
-pygmentsCodefences = true
-pygmentsStyle = "autumn"
+# pygmentsCodefences = true
+# pygmentsStyle = "autumn"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokailight"
+    tabWidth = 4

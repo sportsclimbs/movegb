@@ -1,9 +1,48 @@
-body {
-    background-color: hsl(26, 21%, 85%);
-    color: hsl(0, 2%, 20%);
-    font-family: 'segoe ui';
+:root {
+    --bg: hsl(0, 3%, 14%);
+    --text: hsl(204, 50%, 74%);
 }
 
-main {
-    background-color: hsl(187, 7%, 77%);
+body {
+    background-color: var(--bg);
+    color:var(--text);
+    font-family: 'segoe ui';
+    font-size: 20px;
+    line-height: 1.5;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+main {
+    /* background-color: hsl(187, 7%, 77%); */
+}
+
+.listpage {
+    /* background-color: hsl(60, 17%, 85%); */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.listpage>li {
+    margin-bottom: 1em;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+/* styles for coding */
+
+pre,
+code {
+    font-family: 'mononokiRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: .9em;
+    line-height: 1.2;
+ } 

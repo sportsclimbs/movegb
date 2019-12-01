@@ -2,6 +2,7 @@
 title: MoveGB Story
 summary: "My story again in a different way"
 draft: true
+summary: "Another writing attempt of my woes"
 ---
 
 

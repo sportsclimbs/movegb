@@ -2,6 +2,7 @@
 title: "Movegb Scam"
 date: 2019-11-09T16:07:25Z
 draft: true
+summary: "How those bastards rip people off"
 ---
 
 ## How a 'free' pass cost me £44 to go climbing.
