@@ -2,7 +2,7 @@
 title: "About"
 date: 2019-12-01T08:33:13Z
 draft: true
-summary: "Some notes about this site and it's purpose"
+summary: "Some notes about this site and it's purpose"g
 ---
 
 This site was first designed to provide info about the dark patterns and scammy nature of MoveGB
