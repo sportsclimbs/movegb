@@ -9,7 +9,9 @@
     <ul class="listpage">
         {{ range .Pages }}
 
-            <li><a href="{{.URL}}">{{ .Title }}</a><br>{{ .Summary }}</li>
+            <li><a href="{{.Permalink}}">{{ .Title }}</a><br>{{ .Summary }}</li>
+
+            <!-- WARN 2019/12/01 13:53:30 Page.URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url -->
 
         {{ end }}
     
