@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://movegb.now.sh"
 languageCode = "en-us"
 title = "MoveGB test site"
 
