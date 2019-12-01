@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+    <!-- This content comes from any _index.md files which are landing pages for specific folders or the home page -->
+
+    <ul class="listpage">
+        {{ range .Pages }}
+
+            <li><a href="{{.URL}}">{{ .Title }}</a><br>{{ .Summary }}</li>
+
+        {{ end }}
+    
+    </ul>
+
+{{ end }}

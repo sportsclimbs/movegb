@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "MoveGB test site"
+
+# Syntax highlighting. Themes include solarized-dark, autumn, github, friendly, monokai, monokailight
+pygmentsCodefences = true
+pygmentsStyle = "autumn"

@@ -1,0 +1,9 @@
+body {
+    background-color: hsl(26, 21%, 85%);
+    color: hsl(0, 2%, 20%);
+    font-family: 'segoe ui';
+}
+
+main {
+    background-color: hsl(187, 7%, 77%);
+}
