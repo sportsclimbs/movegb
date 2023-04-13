@@ -2,8 +2,9 @@
 title: "Coisas Test"
 date: "2019-12-02"
 draft: "false"
+cover_image: "https://picsum.photos/id/802/2160/550"
 ---
-So this is a new file created via coisas online.
+So this is a new file created via [coisas](https://coisas.fiatjaf.com/) online.
 
 Here is bold text.
 

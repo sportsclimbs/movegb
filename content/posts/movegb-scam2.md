@@ -1,8 +1,11 @@
 ---
-title: MoveGB Story
+title: MoveGB Story 2
 summary: "My story again in a different way"
+date: 2019-11-14T16:07:25Z
 draft: true
+weight: 30
 summary: "Another writing attempt of my woes"
+cover_image: "https://picsum.photos/id/602/2160/550"
 ---
 
 

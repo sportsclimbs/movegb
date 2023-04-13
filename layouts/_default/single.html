@@ -4,6 +4,11 @@
 
     <h1>{{ .Title }}</h1>
 
+    <div class="meta">
+        <time>{{ .Date.Format "02 Jan 2006" }}</time>
+        <div class="wordcount">No. of words: {{ .WordCount }}</div>
+    </div>
+
     {{ .Content }}
 
 </main>

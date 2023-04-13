@@ -10,13 +10,25 @@
 </head>
 <body>
 
-    <div class="container">
-
-    {{ block "main" . }}
     
-    {{ end }}
+    <div class="container">
+        <header>
+            <img src="{{ with .Params.cover_image }}{{ . }}{{ else }}https://picsum.photos/id/702/2160/550{{ end }}" width="2160" height="550" alt="picsum image">
+        </header>
+        <div class="gradient"></div>
+        <nav class="header-nav">
+            
+            {{ range site.Menus.main }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+        </nav>
 
-</div>
+        {{ block "main" . }}
+        
+        {{ end }}
+
+        {{ partial "sidebar" . }}
+    </div>
 </body>
 
 </html>

@@ -1,25 +1,76 @@
 :root {
-    --bg: hsl(0, 3%, 14%);
-    --text: hsl(204, 50%, 74%);
+    --bg: #252323;
+    --text: hsl(0, 0%, 66.7%);
 }
 
 body {
+    margin: 0;
+    min-height: 100vh;
     background-color: var(--bg);
+    background-image: 
+        radial-gradient(circle at -5vw -3vw, rgba(159, 124, 48, 0.4) 0 5vw, transparent 55vw 100%),
+        radial-gradient(circle at 110% 120%, rgba(203, 159, 62, 0.4) 0 1vw, transparent 40vw 100%);
+    background-blend-mode: screen multiply;
+    background-attachment: fixed;
     color:var(--text);
     font-family: 'segoe ui';
     font-size: 20px;
     line-height: 1.5;
 }
 
+
 .container {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto, 1fr;
+    gap: 1em;
+    grid-template-areas: 
+        "header header header header header header header header header"
+        ". . main main main . aside aside ."
+    ;
+}
+header {
+    grid-area: header;
+}
+header img {
+    width: 100%;
+    height: auto;
+    filter: sepia(0.5);
+    object-fit: center;
+}
+.gradient {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#0008 0 10%, transparent 100%);
+    z-index: 50;
+    /* background-color: blue; */
+    grid-area: header;
+}
+.header-nav {
+    grid-area: header;
+    margin: 1em 2em;
+    z-index: 100;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.header-nav a:first-child {
+    margin-right: auto;
+}
+aside {
+    grid-area: aside;
 }
 main {
     /* background-color: hsl(187, 7%, 77%); */
+    /* columns: 2 400px; */
+    grid-area: main;
 }
-
+main :is(p, li) {
+    max-width: 60ch;
+}
 .listpage {
+    top: 4em;
+    position: sticky;
     /* background-color: hsl(60, 17%, 85%); */
     list-style: none;
     padding: 0;
@@ -46,3 +97,26 @@ code {
     font-size: .9em;
     line-height: 1.2;
  } 
+
+h1 {
+    font-family: georgia, serif;
+    font-weight: normal;
+    font-size: 4em;
+    line-height: 1;
+    margin: .25em 0;
+    color: #f8af03;
+}
+
+h1,
+.meta {
+    column-span: all;
+}
+.meta + * {
+    margin-top: 0;
+}
+
+ .meta {
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+ }
