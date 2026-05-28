@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: Home
 date: 2023-04-13T11:30:48+01:00
 menu:
   main:

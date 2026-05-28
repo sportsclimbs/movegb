@@ -6,6 +6,8 @@ cover_image: "https://picsum.photos/id/802/2160/550"
 ---
 So this is a new file created via [coisas](https://coisas.fiatjaf.com/) online.
 
+You can read about Coisas [here](https://jamstack.com/headless-cms/coisas/).
+
 Here is bold text.
 
 Not sure if the page is generated via Hugo. I’d guess not though it does have two title and date by default.

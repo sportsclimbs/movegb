@@ -1,6 +1,9 @@
 <aside>
     <ul class="listpage">
-        {{ range site.RegularPages }}
+        <li>
+            <h2>Latest Posts..</h2>
+        </li>
+        {{ range first 8 (where site.RegularPages "Section" "posts") }}
     
         <li><a href="{{.Permalink}}" title="{{ .Summary | truncate 100 }}">{{ .Title }}</a> {{ .WordCount }} words</li>
     

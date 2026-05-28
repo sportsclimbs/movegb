@@ -1,7 +1,7 @@
 {{ define "main" }}
 
+<h1>{{ .Title }}</h1>
 <main>
-    <h1>{{ .Title }}</h1>
 
     <div class="meta">
         <time>{{ .Date.Format "02 Jan 2006" }}</time>
@@ -9,6 +9,14 @@
     </div>
 
     {{ .Content }}
+
+    <section class="section-content">
+        <ul>
+            {{ range .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+        </ul>
+    </section>
 
     <!-- This content comes from any _index.md files which are landing pages for specific folders or the home page -->
 </main>
