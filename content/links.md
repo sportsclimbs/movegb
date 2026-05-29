@@ -1,10 +1,7 @@
 ---
 title: Links
 summary: "Useful links to related information"
-cover_image: "https://picsum.photos/id/313/2160/550"
-menu:
-    main:
-      weight: 1000
+# cover_image: "https://picsum.photos/id/313/2160/550"
 ---
 
 Some links

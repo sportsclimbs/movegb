@@ -1,11 +1,11 @@
 <aside>
-    <ul class="listpage">
+    <ul class="list-page">
         <li>
             <h2>Latest Posts..</h2>
         </li>
-        {{ range first 8 (where site.RegularPages "Section" "posts") }}
-    
-        <li><a href="{{.Permalink}}" title="{{ .Summary | truncate 100 }}">{{ .Title }}</a> {{ .WordCount }} words</li>
+        <li><a href="/about/">about</a></li>
+        {{ range first 18 (where site.RegularPages "Section" "posts") }}
+            <li><a href="{{.Permalink}}" title="{{ .Summary | truncate 100 }}">{{ .Title }}</a> {{ .WordCount }} words</li>
     
         <!-- WARN 2019/12/01 13:53:30 Page.URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url -->
     

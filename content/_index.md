@@ -1,9 +1,19 @@
 ---
 title: Home
 date: 2023-04-13T11:30:48+01:00
-menu:
-  main:
-    weight: 10
+cover_image: images/ez-curls.jpg
+style: |-
+  li a+i {
+    opacity: 0.5;
+  }
+  main li {
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      background: #0004;
+      }
+    }
 ---
 
 
@@ -15,8 +25,4 @@ Some pages were added using Coisas, some kind of cloud based headless CMS I beli
 
 Site updated in April 2023 to test authenticating on GitHub after changing the user.name and user.email.
 
-Some links:
-
-1. [about](/about/)
-2. [links](/links/)
-3. [posts](/posts/)
+## Pages here..

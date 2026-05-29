@@ -1,0 +1,11 @@
+<footer>
+    <p>Made with Hugo {{ hugo.Version }}</p>
+    <ul>
+        {{ range site.Menus.section }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+    <p>
+        The site has {{ len site.Pages }} pages.
+    </p>
+</footer>

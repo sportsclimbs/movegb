@@ -1,11 +1,32 @@
 baseURL = "https://movegb.now.sh"
-languageCode = "en-us"
-title = "MoveGB test site"
+locale = "en-GB"
+title = "MoveGB Scam"
+description = "How Move GB is conning people with dark patterns."
 
-# Syntax highlighting. Themes include solarized-dark, autumn, github, friendly, monokai, monokailight
-# pygmentsCodefences = true
-# pygmentsStyle = "autumn"
-sectionPagesMenu = "main"
+# Syntax highlighting. Themes include solarized-dark, autumn,
+# github, friendly, monokai, monokailight
+
+sectionPagesMenu = "section"
+
+[[ menu.main ]]
+  name = "Move GB scam"
+  pageRef = "/"
+  weight = "10"
+
+[[ menu.main]]
+  name = "about"
+  pageRef = "/about/"
+  weight = "20"
+
+[[ menu.main ]]
+  name = "posts"
+  pageRef = "/posts/"
+  weight = "30"
+
+[[ menu.main ]]
+  name = "links"
+  pageRef = "/links/"
+  weight = "40"
 
 [markup]
   [markup.highlight]
@@ -15,5 +36,9 @@ sectionPagesMenu = "main"
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = "monokailight"
+    style = "solarized"
     tabWidth = 4
+
+[ params ]
+  headline = "Dark patterns in the industry"
+  subhead = "For the first time ever a courageous <span>Move GB</span> user speaks out and reveals the abominable goings on in that nefarious organisation."

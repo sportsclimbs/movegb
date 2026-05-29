@@ -1,10 +1,10 @@
 ---
-title: "Movegb Story 1"
+title: "MoveGB 1"
 date: 2019-11-09T16:07:25Z
 draft: false
 weight: 20
 summary: "How those bastards rip people off"
-cover_image: "https://picsum.photos/id/894/2160/550"
+cover_image: images/squats.jpg
 ---
 
 ## How a 'free' pass cost me £44 to go climbing.

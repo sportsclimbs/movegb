@@ -1,0 +1,34 @@
+<header>
+
+    
+    <nav class="header-nav">
+        {{ range site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name | title }}</a>
+        {{ end }}
+    </nav>
+    {{ partial "inline/cover" . }}
+
+    {{ if .IsHome }}
+        <section class="cta">
+            <div class="headline">
+                {{ site.Params.headline }}
+            </div>
+                <span class="subhead">{{ site.Params.subhead | safeHTML }}</span>
+                <a href="/posts/movegb-scam2/" class="btn">show me</a>
+        </section>
+        {{ else }}
+        <h1>{{ .Title }}</h1>
+        {{ end }}
+</header>
+
+
+{{ define "_partials/inline/cover" }}
+<div class="cover-image">
+    {{ with .Params.cover_image }}
+    {{ $img := resources.Get . }}
+    <img src="{{ $img.RelPermalink }}" alt="no image">
+    {{ else }}
+    <img src="https://picsum.photos/id/174/2160/1150" alt="picsum image">
+    {{ end }}
+</div>
+{{ end }}
