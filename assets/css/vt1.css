@@ -1,0 +1,27 @@
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(root) {
+    animation-duration: 1.5s;
+}
+
+@keyframes scale-in {
+    from {
+        translate: 100vw;
+    }
+}
+
+@keyframes scale-out {
+    to {
+        translate: -100vw;
+    }
+}
+
+::view-transition-old(root) {
+    animation-name: scale-out;
+}
+
+.header-nav {
+    view-transition-name: nav;
+}

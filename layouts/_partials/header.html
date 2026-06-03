@@ -1,12 +1,9 @@
 <header>
 
     
-    <nav class="header-nav">
-        {{ range site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Name | title }}</a>
-        {{ end }}
-    </nav>
-    {{ partial "inline/cover" . }}
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    
+    {{ partial "inline/cover.html" . }}
 
     {{ if .IsHome }}
         <section class="cta">
@@ -22,13 +19,16 @@
 </header>
 
 
-{{ define "_partials/inline/cover" }}
+{{ define "_partials/inline/cover.html" }}
 <div class="cover-image">
     {{ with .Params.cover_image }}
     {{ $img := resources.Get . }}
+    {{ with $img }}
     <img src="{{ $img.RelPermalink }}" alt="no image">
+    {{ end }}
     {{ else }}
     <img src="https://picsum.photos/id/174/2160/1150" alt="picsum image">
     {{ end }}
 </div>
+{{ partial "button-bank" . }}
 {{ end }}

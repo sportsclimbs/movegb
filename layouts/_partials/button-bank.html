@@ -1,0 +1,10 @@
+{{ $btns := slice "1" "2" "3" "4" }}
+
+<div class="button-bank">
+        <button class="btn" id="btn-1" title="reveal">1</button>
+    {{ with .Params.buttons }}
+        {{ range . }}
+        <button class="btn" id="btn-{{ .label }}" title="{{ .title }}">{{ .label }}</button>
+        {{ end }}
+    {{ end }}
+</div>

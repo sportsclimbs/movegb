@@ -2,14 +2,33 @@
 
 <main>
 
+{{ if .Section }}
+{{ partial "meta" . }}
+{{ end }}
 
-    <div class="meta">
-        <time>{{ .Date.Format "02 Jan 2006" }}</time>
-        <div class="wordcount">No. of words: {{ .WordCount }}</div>
-    </div>
-
+    {{ with .Summary }}
+        <p class="summary"><strong>{{ . }}</strong></p>
+    {{ end }}
     {{ .Content }}
 
+    {{ partial "inline/page-nav" . }}
+
 </main>
+
+{{ end }}
+
+
+{{ define "_partials/inline/page-nav" }}
+{{ $pages := .CurrentSection.Pages.ByDate.Reverse }}
+        <nav class="page-nav">
+            {{ with $pages.Prev . }}
+            <a href="{{ .RelPermalink }}" class="prev-btn">Previous</a>
+                {{ end }} 
+                
+                {{ with $pages.Next . }}
+            <a href="{{ .RelPermalink }}" class="next-btn">Next</a>
+                {{ end }}
+        </nav>
+
 
 {{ end }}

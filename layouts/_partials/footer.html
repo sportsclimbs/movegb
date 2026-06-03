@@ -1,11 +1,13 @@
-<footer>
+<footer style="background-image: url(/img/pattern-1.png);
+">
     <p>Made with Hugo {{ hugo.Version }}</p>
-    <ul>
+    <ul class="list">
         {{ range site.Menus.section }}
             <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
     </ul>
+    <p>{{ .Title }}<br>{{ .Date.Format "2 Jan 06" }}</p>
     <p>
-        The site has {{ len site.Pages }} pages.
+        The site has {{ len site.RegularPages }} pages.
     </p>
 </footer>

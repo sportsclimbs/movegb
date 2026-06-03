@@ -1,0 +1,13 @@
+{{ define "item" }}
+<li class="item">
+    <a href="{{ .RelPermalink }}">
+        {{ with resources.Get ".Params.cover_image" }}
+        <img src="{{ (.Process "resize 450x webp q50").Relpermalink}}" alt="">
+        {{ end }}
+        <div class="item-body">
+            <h2>{{ .LinkTitle }}</h2>
+            <p>{{ .Summary }}</p>
+        </div>
+    </a>
+</li>
+{{ end }}

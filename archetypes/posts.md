@@ -2,5 +2,6 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 summary: "Page synopsis here"
-tags:
+cover_image: images/deadlift.jpg
+tags: [untagged]
 ---

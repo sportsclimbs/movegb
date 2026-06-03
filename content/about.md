@@ -16,7 +16,12 @@ style: |-
       position: absolute;
       inset: 0;
       background: #23eb;
+      transition: all 0.5s ease-out;
     }
+    &:hover::before {
+      inset: 0 0 100% 0;
+      background: red;
+      }
     }
 ---
 

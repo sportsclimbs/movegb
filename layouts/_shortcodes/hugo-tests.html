@@ -1,0 +1,57 @@
+<p>What is <code>.page</code> and <code>.Page</code> and <code>.Pages</code></p>
+
+<p>
+    {{/*  {{ .Page.page }}<br>  */}}
+    {{ .Page }}<br>
+    {{ .Page.Pages }} The folder containing this page, <code>/hugo-tests/</code> contains no others.
+</p>
+
+<h2>.Pages</h2>
+
+<p>Ranging through the <code>first 5 .Parent.Pages</code>. For the dot I have removed the first part of the path to the file.</p>
+
+<ul class="test-list">
+    {{ range first 5 .Page.Parent.Pages }}
+        <li><b>the dot:</b> {{ replace . "/media/fosh/ssd-storage/HTML-extras" "" }}<br>
+        <b>.Title:</b> {{ .Title }}<br>
+        <b>.RelPermalink:</b> {{ .RelPermalink }}<br>
+        <b>.Date:</b> {{ .Date }}<br>
+        <b>.Section:</b> {{ .Section }}<br>
+        <b>.Kind:</b> {{ .Kind }}<br>
+        <b>.WordCount:</b> {{ .WordCount }}<br>
+        <b>.Summary:</b> {{ .Summary | truncate 33 }}<br>
+        <b>.File:</b> {{ .File }}<br>
+        <b>.Params:</b> {{ .Params }}
+    </li>
+    {{ end }}
+</ul>
+
+<h2>More..</h2>
+
+<p>the letter 'd' in single quotes: {{ print 'd' }}</p>
+
+
+<p>
+    Add 1 2 3 and 4:
+    {{ add 1 2 3 4 }}<br>
+Add several strings:<br>
+{{ $str := " This is a single string."}}
+  {{ add "This" "is" "a" "string" $str }}
+</p>
+
+<P>Using <code>printf</code> to put <code>site.Title</code> inside a string, <code>%s</code></P>
+{{ printf "<h3> This is the %s site. </h3>" site.Title | safeHTML }}
+
+<h2>range through a slice</h2>
+{{ $s := slice }}
+
+{{ range 10 }}
+    {{ $s = $s | append . }}
+{{ end }}
+
+{{ $s }}
+
+<p>A `print` statement split over 2 lines with backticks: 
+    {{ print `This is the first line and
+     this is the second"` }}
+</p>

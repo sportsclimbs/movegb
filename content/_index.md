@@ -6,7 +6,7 @@ style: |-
   li a+i {
     opacity: 0.5;
   }
-  main li {
+  main li:has(a) {
     display: flex;
     justify-content: space-between;
 
@@ -16,13 +16,23 @@ style: |-
     }
 ---
 
+## ToDo's
 
-THis is the first paragraph of the home page.
+1. Finish off trying view transitions tutorial.
+2. Tidy up the design and typography.
+3. Animate page nav
+4. Use `color-mix()` CSS function for colour scheme/s.
+
+
+
+## History
 
 This site was maybe first used on Vercel when Vercel was still called Zeit Now.
 
 Some pages were added using Coisas, some kind of cloud based headless CMS I believe.
 
 Site updated in April 2023 to test authenticating on GitHub after changing the user.name and user.email.
+
+Complete overhaul in 2026 trying out a better design, navigation, view transtions and more.
 
 ## Pages here..

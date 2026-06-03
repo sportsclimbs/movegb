@@ -1,0 +1,122 @@
+
+/* -------------- Gradients 2026 ------- */
+
+[alt="ratite"] {
+    position: fixed;
+    z-index: 300;
+    bottom: 0;
+    left: -70vw;
+    animation: runner 3s linear 0s infinite forwards;
+    animation-play-state: paused;
+}
+
+@keyframes runner {
+    to {
+        translate: 170vw 0;
+    }
+    
+}
+
+/* Two main images */
+.cover-image:first-child {
+    z-index: 3;
+}
+
+.desert {
+    z-index: 2;
+}
+
+.run {
+    animation-play-state: running;
+}
+
+.gradient {
+    --color-1: red;
+    --color-2: red;
+    --color-3: blue;
+    --color-4: oklab(86.64500000000001% -0.23392 0.17942);
+    height: 140px;
+    margin-bottom: 2em;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.gradient.srgb {
+    background-image: linear-gradient(in srgb 90deg, var(--color-2), var(--color-3));
+}
+.gradient.hsl {
+    background-image: linear-gradient(in hsl 90deg, var(--color-2), var(--color-3));
+}
+.gradient.lch {
+    background-image: linear-gradient(in oklch 90deg, var(--color-2), var(--color-3));
+}
+.gradient.oklch {
+    background-image: linear-gradient(in oklch 90deg, var(--color-2), var(--color-3));
+}
+.gradient.oklab {
+    background-image: linear-gradient(in oklab 90deg, var(--color-2), var(--color-3));
+}
+
+.gradient.hwb {
+    background-image: linear-gradient(in hwb 90deg, var(--color-2), var(--color-3));
+}
+
+
+.gradient.default {
+  background: linear-gradient(in oklch 90deg, var(--color-1), var(--color-2));
+}
+
+.gradient.long-way {
+  background: linear-gradient(
+    in hsl longer hue 90deg,
+    var(--color-1),
+    var(--color-2)
+  );
+}
+
+.wheel {
+    width: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: solid white 5px;
+    margin-inline: auto;
+    transition: all 1s linear;
+    animation: both;
+    animation: turn 12s timing-function delay infinite direction fill-mode;
+
+    &:hover {
+        rotate: 1turn;
+        /* cursor: pointer; */
+    }
+}
+
+@keyframes turn {
+        to {
+        rotate: 1turn;
+    }
+}
+
+
+.wheel.hsl {
+    background-image: conic-gradient(in hsl longer hue, red, red);
+}
+
+.wheel.srgb {
+        background-image: conic-gradient(in srgb longer hue, red, red);
+}
+
+.wheel.lch {
+        background-image: conic-gradient(in lch longer hue, red, red);
+}
+
+.wheel.oklch {
+        background-image: conic-gradient(in oklch longer hue, red, red);
+}
+.wheel.dec {
+        background-image: conic-gradient(in hsl decreasing hue, red, magenta);
+}
+.wheel.inc {
+        background-image: conic-gradient(in hsl increasing hue, red, magenta);
+}

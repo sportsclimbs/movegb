@@ -1,0 +1,16 @@
+{{ $dir := .Get 0 }}
+
+{{ $files := len (readDir $dir) }}
+{{ $pages := len site.RegularPages }}
+
+
+
+<p>There are {{ $files }} images and {{ $pages }} pages.
+
+{{ if gt $files $pages  }}
+    You have more images than you need.
+    {{ else }}
+    You need more unique images.
+{{ end }}
+</p>
+

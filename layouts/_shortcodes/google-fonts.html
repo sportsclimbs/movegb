@@ -1,0 +1,10 @@
+{{/*  {{ $fonts := .Resources.ByType "image" }}  */}}
+
+<section class="fonts">
+{{ range .Page.Resources.ByType "image" }}
+
+{{ $heading := replace .RelPermalink "/posts/fonts-on-google/" "" }}
+<h2>{{ replace $heading ".png" "" }}</h2>
+  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+{{ end }}
+</section>

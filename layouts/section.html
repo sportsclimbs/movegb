@@ -1,25 +1,44 @@
 {{ define "main" }}
-
 <main>
 
-    <div class="meta">
-        <time>{{ .Date.Format "02 Jan 2006" }}</time>
-        <div class="wordcount">No. of words: {{ .WordCount }}</div>
-    </div>
+  
 
     {{ .Content }}
 
     <section class="section-content">
+        <p>There are {{ len .Pages }} articles in this section.</p>
         <ul>
-            {{ range .Pages }}
-                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ range .Pages.ByDate.Reverse }}
+            {{ .Render "item" }}
+            {{ partial "inline/test" . }}
             {{ end }}
         </ul>
     </section>
 
-    <!-- This content comes from any _index.md files which are landing pages for specific folders or the home page -->
 </main>
+{{ end }}
 
 
+{{ define "_partials/inline/test.html" }}
+<li class="item">
+    <a href="{{ .RelPermalink }}">
+        {{ $img := .Params.cover_image }}
+        {{ with resources.Get $img }}
+        <img src="{{ (.Process "resize 450x webp q50").RelPermalink }}" alt="">
+        {{ end }}
+        <div class="item-body">
+            <h2>{{ .LinkTitle }}</h2>
+            <time datetime="{{ .Date }}">{{ .Date.Format "Mon 2 Jan 06" }}</time>
+            <p>{{ .Summary }}</p>
+        </div>
+    </a>
 
+            {{ with .Params.tags }}
+                <div class="item-tags">
+                    {{ range . }}
+                        <a href="/tags/{{ . }}" class="tag">{{ . }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+</li>
 {{ end }}

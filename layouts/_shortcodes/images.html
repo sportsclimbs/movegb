@@ -1,0 +1,7 @@
+{{ $images := resources.Match "images/*.{jpg,png,avif}" }}
+
+<section class="images">
+    {{ range $images }}
+        <img src="{{ (.Process "resize 550x webp q50").RelPermalink }}" alt="missing image" title="{{ replace .RelPermalink "/images/" "" }}">
+    {{ end }}
+</section>

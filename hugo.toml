@@ -4,9 +4,13 @@ title = "MoveGB Scam"
 description = "How Move GB is conning people with dark patterns."
 
 # Syntax highlighting. Themes include solarized-dark, autumn,
-# github, friendly, monokai, monokailight
+# github, friendly, monokai, monokailight ashen
 
 sectionPagesMenu = "section"
+
+[security]
+  allowContent = ['^text/html$', 'markdown']
+  enableInlineShortcodes = true
 
 [[ menu.main ]]
   name = "Move GB scam"
@@ -24,6 +28,10 @@ sectionPagesMenu = "section"
   weight = "30"
 
 [[ menu.main ]]
+  name = "images"
+  pageRef = "/posts/images/"
+  weight = "35"
+[[ menu.main ]]
   name = "links"
   pageRef = "/links/"
   weight = "40"
@@ -36,8 +44,11 @@ sectionPagesMenu = "section"
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = "solarized"
+    style = "ashen"
     tabWidth = 4
+
+  [markup.goldmark.renderer]
+    unsafe = true
 
 [ params ]
   headline = "Dark patterns in the industry"

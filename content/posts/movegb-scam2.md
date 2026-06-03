@@ -2,9 +2,10 @@
 title: MoveGB 2
 summary: "My story again in a different way"
 date: 2019-11-14T16:07:25Z
-draft: true
+draft: false
 weight: 30
 cover_image: images/weights.jpg
+tags: [scam, dark patterns]
 ---
 
 

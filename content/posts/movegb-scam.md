@@ -4,7 +4,8 @@ date: 2019-11-09T16:07:25Z
 draft: false
 weight: 20
 summary: "How those bastards rip people off"
-cover_image: images/squats.jpg
+cover_image: images/0601-pissed.jpg
+tags: [scam, dark patterns]
 ---
 
 ## How a 'free' pass cost me £44 to go climbing.
@@ -15,7 +16,7 @@ A friend invited me to go climbing at Sheffield Awesome Walls and sent me what w
 
 Now probably like most of you I don't think of myself as a sucker for internet scams. However what I've learned is sometimes our defences can be down, and often that's no accident. Firstly because the pass was sent to me by friend already on the scheme I assumed it must be OK. Secondly I only had about an hour before meeting to go climbing so I rushed through the sign up process.
 
-In retrospect I can now see that MoveGB uses so-called 'dark patterns'. That is UX tricks intentionally designed to manipulate people into things they didn't intend. These patterns are reinforced with dishonest claims that are are less easy to see without hindsight. (see darkpattens.org if you want to know more.)
+In retrospect I can now see that MoveGB uses so-called 'dark patterns'. That is UX tricks intentionally designed to manipulate people into things they didn't intend. These patterns are reinforced with dishonest claims that are are less easy to see without hindsight. (see [deceptive.design](https://www.deceptive.design/) if you want to know more.)
 
 The very first false claim was the 'free' in free pass. To redeem this pass you have to give your credit/debit card details and sign up for 4 weeks first. Reassurances are given at the top of the sign up page:
 

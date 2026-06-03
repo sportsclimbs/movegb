@@ -1,0 +1,29 @@
+:root {
+    --color-one: #0f0;
+    --color-two: blue;
+}
+
+.colours {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-auto-rows: 100px;
+      color: #fff;
+  }
+
+  .one {
+      background-color: var(--color-one);
+  }
+
+  .two {
+      background-color: var(--color-two);
+  }
+
+  .mix {
+      background-color: color-mix(in oklch, var(--color-one), var(--color-two));
+      display: grid;
+      place-items: center;
+  }
+
+  .one {
+      background-color: var(--color-one);
+  }
