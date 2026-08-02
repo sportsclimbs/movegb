@@ -1,0 +1,137 @@
+@property --strobe-speed {
+  syntax: "<time>" |;
+  initial-value: 0.23s;
+  inherits: true;
+}
+
+:root {
+    --strobe-speed: 0.23s;
+}
+  .cover-image img {
+      mix-blend-mode: screen;
+  }
+
+
+  .strobe {
+      animation: strobe 0.16s steps(462) 2s 1000 normal;
+  }
+
+  /* the main strobe used is now blue */
+  .red-strobe {
+      background-image: none;
+      animation: red-strobe var(--strobe-speed) steps(42) .2s 1000 normal;
+  }
+
+  .control-box {
+	position: absolute;
+    z-index: 300;
+	bottom: 3em;
+	left: 50%;
+	padding: 2em;
+    border-radius: 1em;
+	background: #000a;
+  }
+  .strobe-control {
+      accent-color: red;
+      rotate: .5turn;
+  }
+
+  .p34 {
+    background-color: #000;
+      background-image: url(/img/placidplace-pattern-34.gif);
+      background-repeat: round;
+      --header-height: 100vh;
+  }
+
+  .scale-y {
+    scale: 1 0;
+    display: none;
+  }
+  .remove-grid-row {
+    grid-row: 1 / 7;
+  }
+
+  .strobe-light {
+    --h-pos: 16em;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 400;
+    animation: move-light 2.25s steps(5) 0.1s infinite normal;
+}
+#strobe-1 {
+    top: 1em;
+    left: var(--h-pos);
+    transform: skewY(25deg);
+    --x: 20vw;
+    --y: 15vh;
+}
+#strobe-2 {
+    top: 1em;
+    right: var(--h-pos);
+    transform: skewY(-25deg);
+    --x: -20vw;
+    --y: 15vh;
+}
+#strobe-3 {
+    top: 10em;
+    right: var(--h-pos);
+    transform: skewY(-20deg);
+    --x: -20vw;
+    --y: 1vh;
+}
+#strobe-4 {
+    top: 10em;
+    left: var(--h-pos);
+    transform: skewY(20deg);
+    --x: 20vw;
+    --y: -1vh;
+}
+@keyframes move-light {
+    35% {
+        scale: 0.25;
+        translate: var(--x) var(--y);
+    }
+    36% {
+        visibility: hidden;
+
+    }
+       100% {
+        scale: 0.25;
+        translate: var(--x) var(--y);
+        visibility: hidden;
+        /* opacity: 0; */
+    }
+    
+}
+
+  @keyframes strobe {
+      to {
+          background-color: white;
+      }
+
+  }
+
+  @keyframes red-strobe {
+      33% {
+          background-color: rgb(0, 30, 255);
+      }
+
+      66% {
+          background-color: #fff;
+      }
+
+      100% {
+          background-color: #000;
+      }
+
+  }
+
+  audio {
+	display: block;
+	width: 100%;
+	padding: 1em;
+	background: #0004;
+	border-radius: 1em;
+}

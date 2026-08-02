@@ -9,7 +9,7 @@ style: |-
   body {
     background-image: url(/img/b-w-animated.gif);
     background-blend-mode: multiply;
-    background-size: 100%;
+    background-size: 100vw;
     }
 ---
 

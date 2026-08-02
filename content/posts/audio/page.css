@@ -1,0 +1,22 @@
+#audio-box {
+    background-color: #181818;
+    position: fixed;
+    height: 90%;
+    width: 90vw;
+    inset: 3em;
+
+    & audio {
+        display: block;
+        width: 50%;
+        margin: 1em auto;
+    }
+}
+
+#canvas-1 {
+    position: absolute;
+    inset: 5em 3em 3em 3em;
+    width: calc(100% - 6em);
+    height: calc(100% - 6em);
+
+    outline: solid pink 5px;
+}

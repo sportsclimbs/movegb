@@ -1,0 +1,31 @@
+{{ $id := .Get 0 }}
+{{ $id_processed := replace $id " " "-" | lower }}
+
+{{ $img_addr := .Get 1 }}
+{{ $img := resources.Get $img_addr }}
+
+<div popover id="{{ $id_processed }}">
+{{ with $img }}
+        <img src="{{ .RelPermalink }}" alt="popover image">
+{{ end }}
+
+    {{ .Inner }}
+</div>
+
+<button popovertarget="{{ $id_processed }}" class="btn">{{ $id }}</button>
+
+
+
+
+{{ with $img }}
+{{ $target := math.Rand | mul 1000 | math.Ceil }}
+
+<div popover class="full-size" id="p-{{ $target }}">
+    <img src="{{ .RelPermalink }}" alt="full size image">
+</div>
+
+{{ $thumb := $img.Resize "250x" }}
+<button popovertarget="p-{{ $target }}" class="img-btn">
+    <img src="{{ $thumb.RelPermalink }}" alt="thumbnail">
+</button>
+{{ end }}

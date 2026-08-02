@@ -6,6 +6,8 @@ description = "How Move GB is conning people with dark patterns."
 # Syntax highlighting. Themes include solarized-dark, autumn,
 # github, friendly, monokai, monokailight ashen
 
+enableRobotsTXT = true
+
 sectionPagesMenu = "section"
 
 [security]
@@ -49,7 +51,10 @@ sectionPagesMenu = "section"
 
   [markup.goldmark.renderer]
     unsafe = true
-
+  [markup.goldmark.parser.attribute]
+    block = true
+    title = true
+    
 [ params ]
   headline = "Dark patterns in the industry"
   subhead = "For the first time ever a courageous <span>Move GB</span> user speaks out and reveals the abominable goings on in that nefarious organisation."

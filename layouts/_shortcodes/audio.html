@@ -1,0 +1,6 @@
+{{ $sounds := resources.Get (add "audio/" (.Get 0)) }}
+{{ $id := replace (.Get 0) ".mp3" "" }}
+
+<audio controls src="{{ $sounds.RelPermalink }}" id="{{ $id }}">
+    <source>
+</audio>

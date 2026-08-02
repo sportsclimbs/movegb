@@ -4,4 +4,7 @@ date: {{ .Date }}
 summary: "Page synopsis here"
 cover_image: images/deadlift.jpg
 tags: [untagged]
+buttons:
+  - label: 2
+    title: second button
 ---

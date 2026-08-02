@@ -26,6 +26,7 @@ style: |-
 3. [MixKit](https://mixkit.co/) free video clips.
 4. [Loading.io](https://loading.io/pattern/m-lines) customizable animated backgrounds and text. Free account - 10 free assets.
 5. [Giphy](https://giphy.com/) loads of free animated gifs. Download or embed from link.
+6. [Sound Image](https://soundimage.org) free sounds to download.
 
 
 

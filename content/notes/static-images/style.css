@@ -1,0 +1,3 @@
+main .button-bank {
+    grid-template-columns: repeat(auto-fill, minmax(12ch, 1fr));
+}

@@ -1,0 +1,29 @@
+form {
+    background-color: #0007;
+    padding: 2em;
+    border-radius: 2em;
+}
+input {
+    font-size: 1em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    margin-right: .5em;
+    color: #ccc;
+    background-color: oklch(from var(--bg) 27% c h);
+}
+
+form + ul {
+    list-style-type: none;
+    padding: 0;
+
+    & li {
+        padding: 0.5em;
+        border: solid 1px #aaa4;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #65043a;
+        }
+    }
+}

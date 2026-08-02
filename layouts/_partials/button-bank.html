@@ -3,8 +3,10 @@
 <div class="button-bank">
         <button class="btn" id="btn-1" title="reveal">1</button>
     {{ with .Params.buttons }}
+    {{ $btnNo := 1 }}
         {{ range . }}
-        <button class="btn" id="btn-{{ .label }}" title="{{ .title }}">{{ .label }}</button>
+        {{ $btnNo = add $btnNo 1 }}
+        <button class="btn" id="btn-{{ $btnNo }}" title="{{ .title }}">{{ .label }}</button>
         {{ end }}
     {{ end }}
 </div>

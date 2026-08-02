@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main>
+    {{ .Content }}
+
+    {{ $count := 1 }}
+    {{ if .BundleType }}
+        {{ range .Resources.ByType "image" }}
+            <img src="{{ .RelPermalink }}" id="img-{{ $count }}" alt=".Resources image">
+            {{ $count = add $count 1 }}
+        {{ end }}
+    {{ end }}
+</main>
+    
+<script>
+    console.log('{{ $count }}');
+</script>
+{{ end }}

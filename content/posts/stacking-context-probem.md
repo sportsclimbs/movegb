@@ -1,5 +1,6 @@
 ---
 title: "Stacking Context Problem"
+linktitle: Stacking prob
 date: 2026-06-02T21:49:00+01:00
 summary: "A strange problem and resolution by Lumo Ai"
 cover_image: images/elysium.png

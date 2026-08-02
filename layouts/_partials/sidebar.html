@@ -1,11 +1,18 @@
+{{ $section := "" }}
+{{ if .Section }}
+{{ $section = .Section }}
+{{ else }}
+{{ $section = "posts" }}
+{{ end }}
 <aside>
     <ul class="list-page">
         <li>
-            <h2 style="grid-column: 1 / 4; margin: 0;">Latest Posts..</h2>
+            <h2 style="grid-column: 1 / 4; margin: 0;">Latest {{ $section | title }}..</h2>
         </li>
 
+
         {{ $this_page := . }}
-        {{ range first 18 (where site.RegularPages.ByDate.Reverse "Section" "posts") }}
+        {{ range first 18 (where site.RegularPages.ByDate.Reverse "Section" $section) }}
             <li>
                 <a href="{{.Permalink}}" title="{{ .Summary | truncate 100 }}"
                 {{ if eq $this_page . -}}

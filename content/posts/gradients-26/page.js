@@ -1,6 +1,7 @@
 // Add the new background image..
 
 const coverImage = document.querySelector('.cover-image');
+const topImage = document.querySelector('.cover-image :first-child');
 
 {{ $img := resources.Get "images/0601-desert.jpg" }}
 
@@ -19,9 +20,11 @@ addImg();
 
 const bird = document.querySelector('[alt="ratite"]');
 
-const ratiteBtn = document.querySelector('#btn-ratite');
+const btn2 = document.querySelector('#btn-2');
 
-ratiteBtn.addEventListener('click', () => {
+btn2.addEventListener('click', () => {
+    topImage.classList.toggle('fade');
+    // topImage.style.opacity = '0';
     bird.classList.add('run');
     
     setTimeout(() => {
